@@ -1,4 +1,4 @@
-<title>Guffy Fruits</>
+<code><title>Guffy Fruits</>
 
 An game similar to FarmVille.
 Made with JavaScript Vanilla and Firebase.
@@ -15,3 +15,4 @@ author = {
 <footer>
   <p>Also available on Google Play</>
 </>
+</code>
