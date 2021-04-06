@@ -10,7 +10,7 @@ author = {<br>
 	&nbsp;&nbsp;&nbsp;&nbsp;scream: 'Leaving footprints'<br>
 };
 
-&lt;a href='https://guffy-fruits.web.app/'&gt;Play&lt/&gt;
+&lt;a href='https://guffy-fruits.web.app/'>Play</&gt;
 
 &lt;footer&gt;
   &lt;p&gt;Also available on Google Play&lt;/&gt;
