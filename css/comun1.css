@@ -1,0 +1,360 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contenedor-cargador {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #8ea50f;
+    z-index: 10;
+    display: block;
+}
+
+.nombre {
+    font-size: 30px;
+    font-family: MA-1, cursive;
+    color: #FFF;
+    padding: 20px;
+    text-align: center;
+}
+
+.contenedor-cargadores {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    margin: auto;
+}
+
+.cargador {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #DDD;
+    top: 0px;
+    left: 0px;
+    animation-name: cargador;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.c-1 {
+    background-color: #FFF;
+    animation-delay: 0s;
+}
+
+.c-v {
+    background-color: #FFF;
+    animation-delay: 2s;
+}
+
+.c-3 {
+    animation-delay: 4s;
+    background-color: #FFF;
+}
+
+
+@keyframes cargador {
+    0% {
+        top: 0px;
+        left: 0px;
+    }
+
+    8.3% {
+        top: 0px;
+        left: 50px;
+    }
+
+    24.9% {
+        top: 0px;
+        left: 50px;
+    }
+
+    33.2% {
+        top: 50px;
+        left: 50px;
+    }
+
+    49.8% {
+        top: 50px;
+        left: 50px;
+    }
+
+    58.1% {
+        top: 50px;
+        left: 0px;
+    }
+
+    74.7% {
+        top: 50px;
+        left: 0px;
+    }
+
+    83% {
+        top: 0px;
+        left: 0px;
+    }
+
+    100% {
+        top: 0px;
+        left: 0px;
+    }
+}
+
+
+
+.contenedor-fondo {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    min-width: 320px;
+}
+
+.fondo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../imagenes/registro/fondo-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.cobertor {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contenedor-imagen-cargando {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.r-cargando {
+    width: 50px;
+    height: auto;
+}
+
+/* fin cargador */
+
+/* alerta */
+
+.contenedorAlerta {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 15;
+}
+
+.cuadroAlerta {
+    position: absolute;
+    top: 0px;
+    left: 3%;
+    width: 90%;
+    max-width: 400px;
+    min-width: 300px;
+    height: auto;
+    margin: auto;
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 20px 2%;
+}
+
+.mensajeAlerta {
+    font-size: 16px;
+    color: #399290;
+    padding: 20px;
+    text-align: center;
+    font-family: mi-1;
+}
+
+.contenedorInputAlerta {
+    padding: 20px;
+}
+
+.inputAlerta {
+    width: 94%;
+    padding: 5px 3%;
+    border: 0px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 0px;
+    outline: none;
+    background-color: #FFF;
+    color: #399290;
+    font-family: mi-1;
+    border: 1px solid #399290;
+}
+
+.inputAlerta::placeholder {
+    color: #DDD;
+}
+
+.contenedorBotonesAlerta {
+    text-align: center;
+}
+
+.botonAlerta {
+    margin: auto 2%;
+    width: 44%;
+    text-align: center;
+    padding: 5px 0px;
+    color: #FFF;
+    border: 0px;
+    border-radius: 10px;
+    background-color: #DDD;
+    outline: none;
+    cursor: pointer;
+    font-family: MA-1;
+    font-size: 25px;
+}
+
+.b-cancelar {
+    background-color: #C16E76;
+    float: left;
+}
+
+.b-cancelar:active {
+    background-color: #99CC33;
+}
+
+.b-ok {
+    background-color: #399290;
+    float: right;
+}
+
+.b-ok:active {
+    background-color: #99CC33;
+}
+
+/* fin alerta */
+
+@media (min-width: 640px) and (min-height: 640px) {
+
+    .cuadroAlerta {
+        position: absolute;
+        top: 0px;
+        left: 0%;
+        width: 70%;
+        max-width: 500px;
+        min-width: 300px;
+        height: auto;
+        margin: auto;
+        background-color: #FFF;
+        border-radius: 10px;
+        padding: 20px 2%;
+    }
+
+    .mensajeAlerta {
+        font-size: 22px;
+        color: #399290;
+        padding: 20px;
+        text-align: center;
+        font-family: mi-1;
+    }
+
+    .botonAlerta {
+        margin: auto 2%;
+        width: 44%;
+        text-align: center;
+        padding: 5px 0px;
+        color: #FFF;
+        border: 0px;
+        border-radius: 10px;
+        background-color: #DDD;
+        outline: none;
+        cursor: pointer;
+        font-family: MA-1;
+        font-size: 35px;
+    }
+
+    .b-cancelar {
+        background-color: #C16E76;
+        float: left;
+    }
+
+    .b-ok {
+        background-color: #399290;
+        float: right;
+    }
+
+}
+
+@media (min-width: 1000px) and (min-height: 1000px) {
+
+    .cuadroAlerta {
+        position: absolute;
+        top: 0px;
+        left: 0%;
+        width: 500px;
+        height: auto;
+        margin: auto;
+        background-color: #FFF;
+        border-radius: 10px;
+        padding: 20px 2%;
+    }
+
+    .mensajeAlerta {
+        font-size: 32px;
+        color: #399290;
+        padding: 20px;
+        text-align: center;
+        font-family: mi-1;
+    }
+
+    .botonAlerta {
+        margin: auto 2%;
+        width: 44%;
+        text-align: center;
+        padding: 5px 0px;
+        color: #FFF;
+        border: 0px;
+        border-radius: 10px;
+        background-color: #DDD;
+        outline: none;
+        cursor: pointer;
+        font-family: MA-1;
+        font-size: 50px;
+    }
+
+    .b-cancelar {
+        background-color: #C16E76;
+        float: left;
+    }
+
+    .b-ok {
+        background-color: #399290;
+        float: right;
+    }
+
+}
+
+/* fin alerta */

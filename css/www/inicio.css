@@ -1,0 +1,83 @@
+.fondo-inicio {
+    background-image: url(../../imagenes/inicio/fondo-1.png);
+}
+
+.i-contenedor-total{
+    position: relative;
+}
+
+
+.personaje {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background-image: url(../../imagenes/inicio/personaje-1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+    margin-top: 20px;
+    display: none;
+}
+
+.p-2{
+    background-image: url(../../imagenes/inicio/personaje-2.png);
+}
+
+.p-final{
+    background-image: url(../../imagenes/interfaz/personaje-final.png);
+}
+
+.iconoApp{
+    background-image: url(../../imagenes/iconoApp.png);
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+}
+
+.contenedor-dialogo{
+    margin: 15px auto;
+    width: 300px;
+    height: auto;
+    display: none;
+}
+
+
+.dialogo {
+    font-family: mi-1, cursive;
+    color: #FFF;
+    font-size: 14px;
+    text-align: center;
+    background-color: #000;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.vecina{
+    background-color: #fbc233;
+    color: #972a4e;
+}
+
+.boton {
+    text-align: center;
+    position: relative;
+    margin: 15px auto;
+    width: 180px;
+    height: 30px;
+    background-image: url(../../imagenes/interfaz/fondo-Boton-Madera-Claro-Largo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: none;
+
+}
+
+.texto-boton {
+    padding-top: 5px;
+    color: #972a4e;
+    font-size: 20px;
+    text-align: center;
+    font-family: MA-1, cursive;
+    cursor: pointer;
+}

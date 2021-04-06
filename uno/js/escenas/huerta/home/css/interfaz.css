@@ -1,0 +1,354 @@
+.contenedor-Total {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+/* canvas */
+.juego{
+    border: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: "#8ea50f";
+}
+
+.juego:active{
+    background-color: aquamarine;
+}
+
+/* contenedor de botones y puntajes */
+
+.contenedor-interfaz{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 0px;
+    display: none;
+}
+
+
+
+/* menu superior */
+.cont-total-menu-superior {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 0px;
+    width: 100%;
+}
+
+.cont-menu-superior {
+    position: relative;
+    margin: auto;
+    margin-top: 0px;
+    top: -95px;
+    width: 320px;
+    height: 110px;
+    transition-property: margin;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    z-index: 3;
+}
+
+.cont-menu-superior-activo {
+    margin-top: 90px;
+}
+
+.cont-menu-superior-oculto {
+    margin-top: 0px;
+}
+
+.boton-principal-superior {
+    top: 95px;
+    z-index: 3;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 5px auto 5px 5px;
+}
+
+.b-herramientas {
+    background-image: url(../../../../../../imagenes/interfaz/b-herramientas.png);
+}
+
+.b-cadena {
+    background-image: url(../../../../../../imagenes/interfaz/b-cadena.png);
+}
+
+
+.area-menu-superior {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 150px;
+    height: 90px;
+    overflow-y: auto;
+    margin: 0px auto 0px;
+    border-radius: 0px 0px 10px 10px;
+    background-color: #f9f9f9;
+}
+
+.cont-boton-menu-superior {
+    position: relative;
+    width: 50%;
+    height: auto;
+    float: left;
+}
+
+
+.boton-menu-superior {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 5px auto;
+}
+
+.descripcion-boton-menu-superior {
+    position: relative;
+    font-family: mi-1, cursive;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    margin-top: 5px;
+}
+/* contenedor puntajes */
+
+.contenedor-Cabecera {
+    position: relative;
+    margin: 10px auto;
+    width: 320px;
+    height: 0px;
+    text-align: right;
+}
+
+.c-Monedas {
+    position: relative;
+    width: 100px;
+    height: 33px;
+    right: 15px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: auto 10px auto auto;
+    background-image: url(../../../../../../imagenes/interfaz/c-Monedas.png);
+}
+
+.texto-c-Monedas {
+    position: absolute;
+    top: 9px;
+    left: 35px;
+    width: 40px;
+    text-align: center;
+    font-size: 15px;
+    color: #FFF;
+    font-family: MA-1, cursive;
+}
+
+/* fin contenedor puntajes */
+
+/* ---------------------------- */
+
+.cont-total-menu {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    height: 0px;
+    width: 100%;
+}
+
+.cont-menu {
+    position: relative;
+    margin: auto;
+    margin-top: 0px;
+    top: 0px;
+    width: 320px;
+    height: 300px;
+    transition-property: margin;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    z-index: 3;
+}
+
+.cont-menu-activo {
+    margin-top: -220px;
+}
+
+.cont-menu-oculto {
+    margin-top: 0px;
+}
+
+.boton-principal {
+    top: -80px;
+    z-index: 3;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 5px auto;
+}
+
+.b-inicio {
+    background-image: url(../../../../../../imagenes/interfaz/b-Inicio.png);
+}
+
+.area-menu {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 320px;
+    height: 220px;
+    overflow-y: auto;
+    margin: 0px auto 0px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #f9f9f9;
+    transition-property: top;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+}
+
+.area-menu-oculto {
+    top: 220px;
+}
+
+.cont-boton-menu {
+    position: relative;
+    width: 33%;
+    min-width: 80px;
+    height: auto;
+    float: left;
+}
+
+.boton-menu {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 5px auto;
+}
+
+.b-construir {
+    background-image: url(../../../../../../imagenes/interfaz/b-construir.png);
+}
+
+.b-sembrar {
+    background-image: url(../../../../../../imagenes/interfaz/b-sembrar.png);
+}
+
+.b-demoler {
+    background-image: url(../../../../../../imagenes/interfaz/b-demoler.png);
+}
+
+.b-ocultar {
+    background-image: url(../../../../../../imagenes/interfaz/b-ocultar.png);
+}
+
+.b-tienda {
+    background-image: url(../../../../../../imagenes/interfaz/b-tienda.png);
+}
+
+.b-sesion {
+    background-image: url(../../../../../../imagenes/interfaz/b-sesion.png);
+}
+
+.descripcion-boton-menu {
+    position: relative;
+    font-family: mi-1, cursive;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+.contenedor-opcion {
+    position: relative;
+    width: 100%;
+    margin: 5px 0px;
+    background-color: aliceblue;
+}
+
+.imagen-muestra {
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    float: left;
+}
+
+
+.boton-comprar {
+    text-align: center;
+    position: relative;
+    margin: 0px auto;
+    width: 100px;
+    height: 32px;
+    background-image: url(../../../../../../imagenes/interfaz/fondo-Boton-Madera-Oscuro.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.info-titulo {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    font-family: MA-1, cursive;
+    font-size: 30px;
+    color: #972a4e;
+}
+
+.info-moneda {
+    width: 20px;
+    height: 20px;
+}
+
+.texto-boton-comprar {
+    padding-top: 2px;
+    color: #f0ee15;
+    font-size: 30px;
+    text-align: center;
+    font-family: MA-1, cursive;
+    cursor: pointer;
+}
+
+.datos-moneda {
+    width: 8px;
+    height: 8px;
+}
+
+.datos-planta{
+    margin: 5px;
+    color: #972a4e;
+    font-size: 14px;
+    text-align: left;
+    font-family: MA-1, cursive;
+}
+
+.icono-tutorial{
+    width: auto;
+    height: auto;
+    max-height: 30px;
+}
+
+.personaje-final {
+    height: 100px;
+    width: auto;
+    border-radius: 20px;
+}

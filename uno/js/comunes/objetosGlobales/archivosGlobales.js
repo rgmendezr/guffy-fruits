@@ -1,0 +1,4 @@
+var archivosGlobales= {
+    imagenes: [],
+    sonidos: [],
+}

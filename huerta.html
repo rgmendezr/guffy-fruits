@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Guffy Fruits</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <link rel="stylesheet" href="css/letras/letras.css">
+    <link rel="icon" type="image/x-icon" href="imagenes/icono.svg" />
+
+    <link rel="stylesheet" href="css/comun1.css">
+    <link rel="stylesheet" href="uno/js/escenas/huerta/home/css/interfaz.css">
+
+    <script src="js/comun.js"></script>
+    <script src="js/constantesGlobales.js"></script>
+    <script src="js/cuadroAlerta.js"></script>
+    <script src="js/firebaseSesion.js"></script>
+    <script src="js/fechas.js"></script>
+
+    <script src="uno/js/comunes/programador.js"></script>
+    <script src="uno/js/comunes/pantalla.js"></script>
+    <script src="uno/js/comunes/cargador.js"></script>
+    <script src="uno/js/comunes/objetosGlobales/archivosGlobales.js"></script>
+    <script src="uno/js/comunes/eventos.js"></script>
+    <script src="uno/js/comunes/monedas.js"></script>
+    <script src="uno/js/comunes/publicidad.js"></script>
+
+    <script src="uno/js/escenas/escenas.js"></script>
+
+    <script src="uno/js/escenas/cargador/cargador.js"></script>
+    <script src="uno/js/escenas/cargador/objetos/cargador.js"></script>
+
+    <!-- Escena: Huerta -->
+    <script src="uno/js/escenas/huerta/funciones/sembrar.js"></script>
+    <script src="uno/js/escenas/huerta/funciones/construir.js"></script>
+    <script src="uno/js/escenas/huerta/funciones/recolectar.js"></script>
+    <script src="uno/js/escenas/huerta/funciones/demoler.js"></script>
+    <script src="uno/js/escenas/huerta/funciones/comprar.js"></script>
+
+    <script src="uno/js/escenas/huerta/objetos/extra.js"></script>
+    <script src="uno/js/escenas/huerta/objetos/huerta.js"></script>
+    <script src="uno/js/escenas/huerta/objetos/plantas.js"></script>
+    <script src="uno/js/escenas/huerta/objetos/edificios.js"></script>
+    <script src="uno/js/escenas/huerta/objetos/archivos.js"></script>
+    <script src="uno/js/escenas/huerta/objetos/productos.js"></script>
+
+    <script src="uno/js/escenas/huerta/huerta.js"></script>
+    <script src="uno/js/escenas/huerta/mapa.js"></script>
+    <script src="uno/js/escenas/huerta/constantes.js"></script>
+
+
+    <script src="uno/js/escenas/huerta/eventos/eventosTouch.js"></script>
+    <script src="uno/js/escenas/huerta/eventos/eventosRaton.js"></script>
+    <!-- Fin escena: Huerta -->
+
+    <script src="js/traducir.js"></script>
+    <script src="uno/texto/huerta.js"></script>
+</head>
+
+<body id="body">
+
+    <div id="contenedor-cargador" class="contenedor-cargador">
+        <div class="nombre">Guffy Fruits</div>
+        <div id="contenedor-cargadores" class="contenedor-cargadores">
+            <div class="cargador c-1"></div>
+            <div class="cargador c-v"></div>
+            <div class="cargador c-3"></div>
+        </div>
+        <script>
+            var anchoCuadroBoton = $("contenedor-cargadores").offsetWidth;
+            var anchoPantalla = window.innerWidth;
+            var xFinal = (anchoPantalla / 2) - (anchoCuadroBoton / 2);
+            $("contenedor-cargadores").style.left = xFinal + "px";
+
+            var altoCuadroBoton = $("contenedor-cargadores").offsetHeight;
+            var alturaPantalla = window.innerHeight;
+            var yFinal = (alturaPantalla / 2) - (altoCuadroBoton / 2);
+            $("contenedor-cargadores").style.top = yFinal + "px";
+
+        </script>
+    </div>
+
+    <div id="contenedorTotal" class="contenedor-Total">
+        <canvas id="juego" class="juego" style=""></canvas>
+
+        <div id="contenedor-interfaz" class="contenedor-interfaz">
+
+            <div id="cont-total-menu-superior" class="cont-total-menu-superior">
+                <div id="cont-menu-superior" class="cont-menu-superior">
+
+                    <div class="area-menu-superior">
+                        <div id="b-ocultar" class="cont-boton-menu-superior">
+                            <div class="descripcion-boton-menu-superior" data-idTraduccion="bOcultar">
+                                Ocultar
+                            </div>
+                            <div class="boton-menu-superior b-ocultar"></div>
+
+                        </div>
+                        <div id="b-cadena" class="cont-boton-menu-superior">
+                            <div class="descripcion-boton-menu-superior" data-idTraduccion="bCadena">
+                                Cadena
+                            </div>
+                            <div class="boton-menu-superior b-cadena"></div>
+
+                        </div>
+
+                    </div>
+                    <div id="b-herramientas" class="boton-principal-superior b-herramientas">
+                    </div>
+                </div>
+            </div>
+            <div id="contenedor-Cabecera" class="contenedor-Cabecera">
+                <div id="b-monedas" class="c-Monedas">
+                    <div id="contador-monedas" class="texto-c-Monedas">XX</div>
+                </div>
+            </div>
+
+            <div id="cont-total-menu" class="cont-total-menu">
+                <div id="cont-menu" class="cont-menu">
+                    <div id="b-inicio" class="boton-principal b-inicio">
+                    </div>
+                    <div class="area-menu">
+                        <div id="b-construir" class="cont-boton-menu">
+                            <div class="boton-menu b-construir"></div>
+                            <div class="descripcion-boton-menu" data-idTraduccion="bConstruir">
+                                Construir
+                            </div>
+                        </div>
+                        <div id="b-sembrar" class="cont-boton-menu">
+                            <div class="boton-menu b-sembrar"></div>
+                            <div class="descripcion-boton-menu" data-idTraduccion="bSembrar">
+                                Sembrar
+                            </div>
+                        </div>
+                        <div id="b-demoler" class="cont-boton-menu">
+                            <div class="boton-menu b-demoler"></div>
+                            <div class="descripcion-boton-menu" data-idTraduccion="bDemoler">
+                                Demoler
+                            </div>
+                        </div>
+                        <div id="b-productos" class="cont-boton-menu">
+                            <div class="boton-menu b-tienda"></div>
+                            <div class="descripcion-boton-menu" data-idTraduccion="bTienda">
+                                Tienda
+                            </div>
+                        </div>
+                        
+                        <div id="b-sesion" class="cont-boton-menu">
+                            <div class="boton-menu b-sesion"></div>
+                            <div class="descripcion-boton-menu" data-idTraduccion="bSesion">
+                                Cerrar Sesión
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="area-construcciones" class="area-menu area-menu-oculto">
+                    </div>
+
+                    <div id="area-plantas" class="area-menu area-menu-oculto">
+                    </div>
+
+                    <div id="area-productos" class="area-menu area-menu-oculto">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/firebase/js/firebase-app.js"></script>
+    <script src="js/firebase/js/firebase-auth.js"></script>
+    <script src="js/firebase/js/firebase-analytics.js"></script>
+    <script src="js/firebase/js/firebase-firestore.js"></script>
+    <script src="js/config.js"></script>
+
+    <script type="text/javascript" src="cordova.js"></script>
+
+    <script src="uno/js/escenas/huerta/home/tutorial.js"></script>
+    <script src="uno/js/escenas/huerta/home/menu.js"></script>
+    <script src="uno/js/escenas/huerta/home/menu-superior.js"></script>
+    <script src="uno/js/escenas/huerta/home/tienda.js"></script>
+    <script src="uno/js/escenas/huerta/home/firebaseApp.js"></script>
+    <script src="uno/js/escenas/huerta/home/interfaz.js"></script>
+    <script src="uno/js/escenas/huerta/home/huerta.js"></script>
+
+</body>
+
+</html>

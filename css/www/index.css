@@ -1,0 +1,30 @@
+.contenedor-personaje {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background-image: url(../../imagenes/interfaz/personaje-0.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.texto-titulo {
+    position: relative;
+    font-size: 30px;
+    font-family: MA-1, cursive;
+    color: #FFF;
+    margin: 10px auto;
+    text-align: center;
+    width: 240px;
+}
+
+.contenedor-sesion {
+    color: #FFF;
+    font-size: 20px;
+    font-family: MA-1, cursive;
+    text-align: center;
+    width: 300px;
+    margin: auto;
+}
