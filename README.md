@@ -12,7 +12,7 @@ author = {<br>
 
 &lt;a href='https://guffy-fruits.web.app/'>Play</&gt;
 
-&lt;footer&gt;
-  &lt;p&gt;Also available on Google Play&lt;/&gt;
+&lt;footer&gt;<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Also available on Google Play&lt;/&gt;<br>
 &lt;/&gt;
 
